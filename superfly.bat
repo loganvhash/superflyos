@@ -18,8 +18,8 @@ echo xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 echo -------------------------------------------------------
 echo L=Launch Program   S=Shutdown
 choice /n /c ls
-if %errrorlevel% = 1 goto programs
-if %errrorlevel% = 2 exit
+if %errrorlevel% == 1 goto programs
+if %errrorlevel% == 2 exit
 :programs
 cls
 echo xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
@@ -35,9 +35,9 @@ echo -------------------------------------------------------
 echo Select option and enter command number, or press X to 
 echo exit.
 choice /n /c x1
-if %errorlevel% = 1 goto desktop
-if %errorlevel% = 2 goto clock
-if %errorlevel% = 3 goto about
+if %errorlevel% == 1 goto desktop
+if %errorlevel% == 2 goto clock
+if %errorlevel% == 3 goto about
 :clock
 cls
 echo xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
@@ -52,7 +52,7 @@ echo xxxxxxxxxxxxxxxxx--------------xxxxxxxxxxxxxxxxxxxxxxxx
 echo -------------------------------------------------------
 echo Press X to exit.
 choice /n /c x
-if %errorlevel% = 1 goto desktop
+if %errorlevel% == 1 goto desktop
 :about
 cls
 echo xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
@@ -67,4 +67,4 @@ echo xxxxxxxxxxxxxxxxx--------------xxxxxxxxxxxxxxxxxxxxxxxx
 echo -------------------------------------------------------
 echo Press X to exit.
 choice /n /c x
-if %errorlevel% = 1 goto desktop
+if %errorlevel% == 1 goto desktop
